@@ -2,11 +2,11 @@ import React from 'react'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-import Computer from "../../assets/images/computer.svg"
-import Phone from "../../assets/images/phone.svg"
+import Computer from "../../assets/images/Computer.svg"
+import Phone from "../../assets/images/Phone.svg"
 import web from "../../assets/images/web.svg"
 import cart from "../../assets/images/cart.svg"
-import Magnifier from "../../assets/images/magnifier.svg"
+import Magnifier from "../../assets/images/Magnifier.svg"
 import marketing from "../../assets/images/marketing.svg"
 import test from "../../assets/images/test.svg"
 import Devops from "../../assets/images/Devops.svg"

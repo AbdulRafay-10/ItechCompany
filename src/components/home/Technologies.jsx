@@ -7,7 +7,7 @@ import MySQL from "../../assets/techStacks/mysql.png"
 import Wordpress from "../../assets/techStacks/wp.png"
 import Vue from "../../assets/techStacks/v.png"
 import Flutter from "../../assets/techStacks/flutter.png"
-import Firebase from "../../assets/techStacks/firebase.png"
+import Firebase from "../../assets/techStacks/Firebase.png"
 import Figma from "../../assets/techStacks/figma.png"
 
 const Technologies = () => {
