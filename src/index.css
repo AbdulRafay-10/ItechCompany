@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #086ad8;
+  --color-text: #0e2b3d;
+}
+
+@layer base {
+  body { @apply text-text; }
+}
+
+/* slick-carousel base styles */
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+/* Water-fill button */
+.btn-water { position: relative; overflow: hidden; isolation: isolate; }
+.btn-water::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--color-primary);
+  transform: translateY(100%);
+  transition: transform .6s cubic-bezier(.2,.8,.2,1);
+  z-index: -1;
+}
+.btn-water:hover { color: #fff !important; }
+.btn-water:hover::before { transform: translateY(0%); }
+
+/* Left-to-right fill button effect */
+.btn-fill-left-right { 
+  position: relative; 
+  overflow: hidden; 
+  isolation: isolate; 
+  transition: color 0.3s ease;
+}
+.btn-fill-left-right::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  background: var(--color-primary);
+  transition: width 0.4s ease;
+  z-index: -1;
+}
+.btn-fill-left-right:hover { 
+  color: #fff !important; 
+}
+.btn-fill-left-right:hover::before { 
+  width: 100%; 
+}
+
+/* Process card border fill animation */
+.proc-card { position: relative; overflow: hidden; }
+/* top progress bar */
+.proc-card .edge-top { position:absolute; top:0; left:0; height:3px; width:100%; background: var(--color-primary); transform: translateX(-100%); transition: transform .5s ease; z-index: 1; pointer-events: none; }
+.proc-card .edge-bottom { position:absolute; bottom:0; left:0; height:3px; width:100%; background: var(--color-primary); transform: translateX(100%); transition: transform .5s ease; z-index: 1; pointer-events: none; }
+/* side progress bar (fills after top completes) */
+.proc-card .edge-side { position:absolute; top:0; bottom:0; width:3px; background: var(--color-primary); transform: scaleY(0); transform-origin: top; transition: transform .5s ease; z-index: 1; pointer-events: none; }
+.proc-card .edge-side.left { left:0; }
+.proc-card .edge-side.right { right:0; }
+
+/* direction: left-to-right then left side, or right-to-left then right side */
+.proc-card.direction-right:hover .edge-top { transform: translateX(0%); }
+.proc-card.direction-right .edge-top { transform-origin: left; }
+.proc-card:hover .edge-side { transform: scaleY(1); }
+.proc-card:hover .edge-side.left { transform: scaleY(1); }
+.proc-card:hover .edge-side.right { transform: scaleY(1); }
+.proc-card.direction-right:hover .edge-bottom { transform: translateX(0%); }
+
+.proc-card.direction-left .edge-top { transform: translateX(100%); transform-origin: right; }
+.proc-card.direction-left:hover .edge-top { transform: translateX(0%); }
+.proc-card.direction-left:hover .edge-side.right { transform: scaleY(1); }
+.proc-card.direction-left:hover .edge-side.left { transform: scaleY(1); }
+
+/* when bottom starts (first card pattern), side should fill from bottom up */
+.proc-card.pattern-trbl .edge-side.left { transform-origin: bottom; }
+.proc-card.pattern-trbl:hover .edge-side.left { transform: scaleY(1); }
+.proc-card.direction-left:hover .edge-bottom { transform: translateX(0%); }
+
+/* Special pattern for first card: top fills right->left and bottom fills left->right simultaneously */
+.proc-card.pattern-trbl .edge-top { transform: translateX(100%); transform-origin: right; }
+.proc-card.pattern-trbl:hover .edge-top { transform: translateX(0%); }
+.proc-card.pattern-trbl .edge-bottom { transform: translateX(-100%); transform-origin: left; }
+.proc-card.pattern-trbl:hover .edge-bottom { transform: translateX(0%); }
+
+/* Swiper custom styles */
+.project-swiper {
+  overflow: visible !important;
+  padding: 0 60px;
+}
+
+.project-swiper .swiper-wrapper {
+  align-items: stretch;
+}
+
+.project-swiper .swiper-slide {
+  height: auto;
+}
