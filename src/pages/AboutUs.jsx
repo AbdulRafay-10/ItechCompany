@@ -7,7 +7,7 @@ import LeadershipTeam from '../components/aboutus/LeadershipTeam'
 function AboutUs() {
   return (
     <main className="w-full">
-      <section className="w-full pt-6 md:pt-24">
+      <section className="w-full pt-24 md:pt-28">
       <div className='flex flex-col justify-center items-center text-center space-y-3 mb-8'>
           <h1 className='text-primary text-3xl md:text-4xl font-semibold'>ABOUT US</h1>
           <div className='w-16 h-1 bg-primary rounded-full'></div>

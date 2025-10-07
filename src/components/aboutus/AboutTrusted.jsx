@@ -38,8 +38,8 @@ function AboutTrusted() {
         </div>
 
         <div className="relative">
-          {/* 150+ card top-right */}
-          <div className="absolute -right-16 -top-16 bg-white rounded-md shadow-lg  px-12 py-7 text-center">
+          {/* 150+ card: desktop top-right, mobile bottom-center */}
+          <div className="absolute right-1/2 translate-x-1/2 bottom-4 md:bottom-auto md:translate-x-0 md:right-[-4rem] md:-top-16 bg-white rounded-md shadow-lg px-8 md:px-12 py-4 md:py-7 text-center">
             <p className="text-5xl font-extrabold text-primary">{projectsCount}+</p>
             <p className="text-lg text-text/70">Completed Projects</p>
           </div>

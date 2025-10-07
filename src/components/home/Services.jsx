@@ -62,7 +62,7 @@ function Services() {
   return (
     <>
     <section className='w-full py-16'>
-      <div className='w-full max-w-[1400px] mx-auto px-1 md:px-2'>
+      <div className='w-full max-w-[1400px] mx-auto px-1 md:px-2 overflow-hidden'>
         <div className='flex flex-col justify-center items-center text-center space-y-3 mb-10'>
           <h1 className='text-primary text-3xl md:text-4xl font-semibold'>SERVICES</h1>
           <h3 className='text-3xl md:text-5xl text-text font-semibold'>Transform Your Business</h3>
@@ -74,7 +74,7 @@ function Services() {
           infinite={true}
           speed={500}
           slidesToShow={3}
-          slidesToScroll={3}
+          slidesToScroll={1}
           responsive={[
             { breakpoint: 1280, settings: { slidesToShow: 3 } },
             { breakpoint: 1024, settings: { slidesToShow: 2 } },

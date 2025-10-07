@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import f3 from '../../assets/images/f3.webp'
 
 function Header() {
@@ -20,12 +21,12 @@ function Header() {
             operations, and boost sales
           </p>
           <div className="flex flex-wrap gap-5 pt-4 justify-center md:justify-start">
-            <button type="button" className=" px-16 py-5 rounded-md bg-primary text-white font-bold text-xl shadow">
+            <Link to="/case-studies" className="px-16 py-5 rounded-md bg-primary text-white font-bold text-xl shadow">
               Why Us ?
-            </button>
-            <button type="button" className="btn-water px-16 py-5 rounded-md border border-primary text-primary font-bold text-xl">
+            </Link>
+            <Link to="/lets-connect" className="btn-water px-16 py-5 rounded-md border border-primary text-primary font-bold text-xl">
               Lets Discuss
-            </button>
+            </Link>
           </div>
         </div>
 

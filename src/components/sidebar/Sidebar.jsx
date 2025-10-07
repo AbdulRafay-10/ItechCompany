@@ -2,7 +2,7 @@ import React from 'react'
 
 function Sidebar({ isOpen, onClose }) {
   return (
-    <div className={`${isOpen ? 'block' : 'hidden'} fixed inset-0 bg-black/25 z-60`} onClick={onClose}>
+    <div className={`${isOpen ? 'block' : 'hidden'} fixed inset-0 bg-black/25 z-[70]`} onClick={onClose}>
       <aside className="absolute right-0 top-0 bottom-0 w-[500px] bg-white p-12 shadow-2xl overflow-auto" onClick={(e) => e.stopPropagation()}>
         <div className="flex items-center justify-between border-b border-slate-200 pb-4 mb-6">
           <h3 className="font-bold text-4xl text-text mb-2">Contact Info</h3>

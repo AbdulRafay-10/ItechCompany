@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
 import Navbar from './components/navbar/Navbar'
+import StairsTransition from './components/transition/StairsTransition'
+import TalkToExpertButton from './components/transition/TalkToExpertButton'
 import Footer from './components/footer/Footer'
 import Sidebar from './components/sidebar/Sidebar'
 import Home from './pages/Home'
@@ -52,10 +54,16 @@ function App() {
 
         <Footer />
 
+        {/* Route change transition overlay */}
+        <StairsTransition />
+
         <Sidebar
           isOpen={isRightSidebarOpen}
           onClose={() => setIsRightSidebarOpen(false)}
         />
+
+        {/* Floating CTA visible across the site */}
+        <TalkToExpertButton />
       </div>
     </Router>
   )

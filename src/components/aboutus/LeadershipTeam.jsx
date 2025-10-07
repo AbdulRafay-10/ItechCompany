@@ -39,8 +39,8 @@ function Card({ member }) {
   return (
     <div className="rounded-xl  text-center relative overflow-visible bg-transparent">
       {/* Top image */}
-      <div className="relative w-full h-80 bg-gray-100 rounded-t-xl overflow-hidden">
-        <img src={member.img} alt={member.name} className="absolute inset-0 w-full h-full object-cover" style={{ objectPosition: member.imgPosition || 'center top' }} />
+      <div className="relative w-full h-72 sm:h-80 bg-gray-100 rounded-t-xl overflow-hidden">
+        <img src={member.img} alt={member.name} className="absolute inset-0 w-full h-full object-cover" style={{ objectPosition: member.imgPosition || 'center 35%' }} />
       </div>
 
       {/* Diamond with plus positioned relative to the whole card, above title */}

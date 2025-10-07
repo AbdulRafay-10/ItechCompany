@@ -37,17 +37,17 @@ const items = [
 function Process() {
   return (
     <section className="w-full py-16">
-       <div className='w-full '>
+      <div className='w-full px-4 sm:px-6 md:px-8 lg:px-12'>
         <div className='flex flex-col justify-center items-center text-center space-y-4 mb-16'>
           <h2 className='text-primary text-3xl md:text-4xl font-semibold'>Our Process</h2>
           <h3 className='text-3xl md:text-5xl text-text font-semibold'>How we work</h3>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 h-[400px] w-[1470px] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mx-auto w-full">
           {items.map((it, idx) => (
             <div
               key={it.title}
-              className={`proc-card ${idx % 2 === 0 ? 'direction-right' : 'direction-left'} ${idx === 0 ? 'pattern-trbl' : ''}  bg-white border border-slate-200 p-10 md:p-12 shadow-sm hover:shadow-md transition-shadow relative min-h-[280px] md:min-h-[320px]`}
+              className={`proc-card ${idx % 2 === 0 ? 'direction-right' : 'direction-left'} ${idx === 0 ? 'pattern-trbl' : ''}  bg-white border border-slate-200 p-8 md:p-12 shadow-sm hover:shadow-md transition-shadow relative min-h-[240px] md:min-h-[320px]`}
             >
               <span className="edge-top" />
               <span className="edge-bottom" />

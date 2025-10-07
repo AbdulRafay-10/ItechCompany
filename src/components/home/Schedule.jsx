@@ -143,9 +143,9 @@ const Schedule = () => {
          <div className='max-w-7xl mx-auto'>
            {currentStep === 1 ? (
              /* Step 1: Date and Time Selection */
-             <div className={`flex gap-8 ${selectedDate ? 'max-w-6xl' : 'max-w-4xl'} mx-auto transition-all duration-300`}>
+            <div className={`flex flex-col md:flex-row gap-6 md:gap-8 ${selectedDate ? 'max-w-6xl' : 'max-w-4xl'} mx-auto transition-all duration-300`}>
                {/* Left Side - Meeting Info */}
-               <div className='bg-white rounded-2xl p-8 shadow-lg flex-shrink-0 w-80'>
+               <div className='bg-white rounded-2xl p-8 shadow-lg flex-shrink-0  sm:w-[300px]'>
                  <div className='flex flex-col items-center mb-6'>
                    <div className='w-20 h-20 rounded-full bg-gray-200 mb-4 flex items-center justify-center'>
                      <span className='text-3xl'>👨‍💼</span>
@@ -180,7 +180,7 @@ const Schedule = () => {
                  <h3 className='text-xl font-semibold text-gray-800 mb-6'>Select a Date & Time</h3>
                  
                  
-                 <div className={`flex gap-6 ${selectedDate ? '' : 'justify-center'}`}>
+                 <div className={`flex flex-col md:flex-row gap-4 md:gap-6 ${selectedDate ? '' : 'justify-center'}`}>
                    {/* Calendar */}
                    <div className={selectedDate ? 'flex-shrink-0' : 'max-w-lg'}>
                      {/* Month Navigation */}
@@ -206,24 +206,24 @@ const Schedule = () => {
                        </button>
                      </div>
 
-                     {/* Week Days Header */}
-                     <div className='grid grid-cols-7 gap-1 mb-2'>
-                       {['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'].map(day => (
-                         <div key={day} className='text-center text-sm font-medium text-gray-500 py-2'>
-                           {day}
-                         </div>
-                       ))}
-                     </div>
+                    {/* Week Days Header */}
+                    <div className='grid grid-cols-7 gap-1 mb-2'>
+                      {['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'].map(day => (
+                        <div key={day} className='text-center text-[10px] sm:text-xs font-medium text-gray-500 py-1 sm:py-2'>
+                          {day}
+                        </div>
+                      ))}
+                    </div>
 
-                     {/* Calendar Days */}
-                     <div className='grid grid-cols-7 gap-2'>
+                    {/* Calendar Days */}
+                    <div className='grid grid-cols-7 gap-1 sm:gap-2'>
                        {generateCalendarDays().map((day, index) => (
                          <button
                            key={index}
                            onClick={() => handleDateSelect(day)}
                            disabled={!day.isAvailable}
                            className={`
-                             h-16 w-16 text-sm rounded-full transition-colors font-bold
+                            h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 text-xs sm:text-sm rounded-full transition-colors font-bold
                              ${day.isCurrentMonth ? '' : 'text-gray-300'}
                              ${day.isPast ? 'cursor-not-allowed text-gray-400 bg-gray-100' : ''}
                              ${day.isSelected ? 'bg-primary text-white shadow-lg' : ''}
@@ -266,8 +266,8 @@ const Schedule = () => {
                    </div>
 
                    {/* Time Selection - Only shows when date is selected */}
-                   {selectedDate && (
-                     <div className='flex-grow min-w-64 pt-16'>
+                    {selectedDate && (
+                      <div className='flex-grow min-w-0 md:min-w-64 pt-6 md:pt-16'>
                        <div className='mb-4'>
                          <span className='text-lg font-semibold text-gray-800'>
                            {selectedDate.toLocaleDateString('en-US', { 
