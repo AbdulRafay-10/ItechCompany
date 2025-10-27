@@ -3,15 +3,10 @@ import { Link, useLocation } from 'react-router-dom'
 import Dropdown from '../dropdown/Dropdown'
 import logo from '../../assets/images/logo.webp'
 
-function Navbar({ onOpenRightSidebar, onOpenMobileMenu }) {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+function Navbar({ onOpenRightSidebar }) {
   const [isServicesOpen, setIsServicesOpen] = useState(false)
   const servicesRef = useRef(null)
   const location = useLocation()
-  const [isDesktop, setIsDesktop] = useState(() => {
-    if (typeof window === 'undefined') return true
-    return window.matchMedia('(min-width: 901px)').matches
-  })
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -29,16 +24,15 @@ function Navbar({ onOpenRightSidebar, onOpenMobileMenu }) {
   useEffect(() => {
     function onResize() {
       const desktop = window.matchMedia('(min-width: 901px)').matches
-      setIsDesktop(desktop)
+      setIsServicesOpen(false)
     }
     window.addEventListener('resize', onResize)
     onResize()
     return () => window.removeEventListener('resize', onResize)
   }, [])
 
-  // Auto-close mobile sidebar on route changes
+  // Auto-close services dropdown on route changes
   useEffect(() => {
-    setIsMobileMenuOpen(false)
     setIsServicesOpen(false)
   }, [location.pathname])
 
@@ -57,20 +51,6 @@ function Navbar({ onOpenRightSidebar, onOpenMobileMenu }) {
     <header className="fixed left-0 right-0 z-50 bg-white shadow-sm">
       <div className="w-full px-0 md:px-20 py-6 md:py-10 grid grid-cols-[auto_1fr_auto] items-center relative">
         <div className="flex items-center gap-2 pl-0 ml-0">
-          <div className="md:hidden mr-2">
-            <button
-              className="inline-flex h-10 w-10 items-center justify-center rounded-lg hover:bg-black/5 flex-col"
-              aria-label="Open Menu"
-              onClick={() => {
-                setIsMobileMenuOpen(true)
-                onOpenMobileMenu?.()
-              }}
-            >
-              <span className="block h-[2px] w-6 bg-primary" />
-              <span className="block h-[2px] w-6 bg-primary my-1.5" />
-              <span className="block h-[2px] w-6 bg-primary" />
-            </button>
-          </div>
          <Link to="/" className="md:static absolute left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0"><img src={logo} alt="logo" className="h-12 md:h-16 w-auto" /></Link>
         </div>
 
@@ -80,8 +60,6 @@ function Navbar({ onOpenRightSidebar, onOpenMobileMenu }) {
           <div
             className="relative"
             ref={servicesRef}
-            onMouseEnter={() => isDesktop && setIsServicesOpen(true)}
-            onMouseLeave={() => isDesktop && setIsServicesOpen(false)}
           >
             <button
               className="inline-flex items-center gap-2 font-semibold text-xl tracking-wide text-text hover:text-primary"
@@ -118,32 +96,6 @@ function Navbar({ onOpenRightSidebar, onOpenMobileMenu }) {
           </button>
         </div>
       </div>
-
-      {isMobileMenuOpen && (
-        <>
-          <div
-            className="fixed inset-0 bg-black/40 z-40"
-            onClick={() => setIsMobileMenuOpen(false)}
-          />
-          <div className="fixed right-0 top-0 bottom-0 w-72 bg-white z-50 shadow-2xl p-4 flex flex-col gap-3">
-            <Link to="/case-studies" onClick={() => setIsMobileMenuOpen(false)} className="text-left font-semibold tracking-wide text-text hover:text-primary">CASE STUDIES</Link>
-            <div className="relative">
-              <button
-                className="inline-flex items-center gap-2 font-semibold tracking-wide text-text hover:text-primary"
-                onClick={(e) => {
-                  e.stopPropagation()
-                  setIsServicesOpen((v) => !v)
-                }}
-              >
-                SERVICES
-              </button>
-              <Dropdown isOpen={isServicesOpen} items={serviceItems} onItemClick={() => setIsServicesOpen(false)} />
-            </div>
-            <Link to="/about" onClick={() => setIsMobileMenuOpen(false)} className="text-left font-semibold tracking-wide text-text hover:text-primary">ABOUT US</Link>
-            <Link to="/lets-connect" onClick={() => setIsMobileMenuOpen(false)} className="text-left font-semibold tracking-wide text-text hover:text-primary">LETS CONNECT</Link>
-          </div>
-        </>
-      )}
     </header>
   )
 }

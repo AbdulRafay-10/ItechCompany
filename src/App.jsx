@@ -23,14 +23,12 @@ import CaseStudiesPage from './pages/CaseStudies'
 
 function App() {
   const [isRightSidebarOpen, setIsRightSidebarOpen] = useState(false)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   return (
     <Router>
       <div className='w-full'>
         <Navbar
           onOpenRightSidebar={() => setIsRightSidebarOpen(true)}
-          onOpenMobileMenu={() => setIsMobileMenuOpen(true)}
         />
 
         <main className="pt-24" style={{ minHeight: '60vh' }}>
