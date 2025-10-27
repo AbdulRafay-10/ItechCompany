@@ -10,12 +10,10 @@ function AboutHero() {
     <section className="w-full ">
       <div className="max-w-[1400px] mx-auto px-4 md:px-12 py-10 md:py-20 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
         <div className="relative flex items-center justify-center md:justify-start min-h-[280px] md:min-h-[480px]">
-          {/* Mobile: single image */}
           <div className="w-full max-w-[560px] md:hidden">
             <img src={imgA} alt="about-hero" className="w-full rounded-lg shadow-2xl" />
           </div>
 
-          {/* Desktop/Tablet: layered composition */}
           <div className="hidden md:block relative w-full max-w-[520px] overflow-visible -ml-14 -mt-72">
             <img src={imgA} alt="team-1" className="absolute left-0 top-6 w-[100%] rounded-lg shadow-2xl" />
             <img src={imgC} alt="team-3" className="absolute left-[28%] top-[84%] w-[100%] rounded-lg shadow-2xl" />

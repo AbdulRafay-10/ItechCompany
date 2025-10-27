@@ -5,7 +5,7 @@ function VisionMission() {
   return (
     <section className="w-full">
       <div className="grid grid-cols-1 md:grid-cols-2">
-      <img src={mission} alt="" className="hidden md:block" />
+      <img src={mission} alt="" className="hidden md:block w-full h-full object-cover" />
         <div className="bg-[#001d4c] text-white p-8 md:p-16">
           <div className="flex flex-col md:flex-row gap-8 text-center md:text-left">
             <div className="flex-1 space-y-10 relative">

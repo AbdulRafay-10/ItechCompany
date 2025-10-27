@@ -9,6 +9,17 @@ import Vue from "../../assets/techStacks/v.png"
 import Flutter from "../../assets/techStacks/flutter.png"
 import Firebase from "../../assets/techStacks/Firebase.png"
 import Figma from "../../assets/techStacks/figma.png"
+import Express from "../../assets/techStacks/expressjs.png"
+import Django from "../../assets/techStacks/django.png"
+import Ruby from "../../assets/techStacks/ruby.png"
+import Next from "../../assets/techStacks/next.png"
+import ReactLogo from "../../assets/techStacks/reactblue.png"
+import Bootstrap from "../../assets/techStacks/Bootstrap.png"
+import Tailwind from "../../assets/techStacks/tailwind.png"
+import HTML5 from "../../assets/techStacks/html5.png"
+import Android from "../../assets/techStacks/Android.png"
+import Adobe from "../../assets/techStacks/Adobe.png"
+import Sketch from "../../assets/techStacks/sketch.png"
 
 const Technologies = () => {
   const techCategories = [
@@ -20,34 +31,33 @@ const Technologies = () => {
         { name: 'Laravel', icon: Laravel }, // Add your Laravel icon here
         { name: 'MongoDB', icon: MongoDB }, // Add your MongoDB icon here
         { name: 'MySQL', icon: MySQL }, // Add your MySQL icon here
-        { name: 'Express.js', icon: null }, // Add your Express.js icon here
-        { name: 'Django', icon: null }, // Add your Django icon here
-        { name: 'Ruby on Rails', icon: null }, // Add your Ruby on Rails icon here
+        { name: 'Express.js', icon: Express  }, // Add your Express.js icon here
+        { name: 'Django', icon: Django }, // Add your Django icon here
+        { name: 'Ruby on Rails', icon: Ruby }, // Add your Ruby on Rails icon here
       ]
     },
     {
       title: 'Front End Development',
       technologies: [
-        { name: 'Next.js', icon: null }, // Add your Next.js icon here
-        { name: 'React', icon: null }, // Add your React icon here
-        { name: 'Bootstrap', icon: null }, // Add your Bootstrap icon here
+        { name: 'Next.js', icon: Next }, // Add your Next.js icon here
+        { name: 'React', icon: ReactLogo }, // Add your React icon here
+        { name: 'Bootstrap', icon: Bootstrap }, // Add your Bootstrap icon here
         { name: 'WordPress', icon: Wordpress }, // Add your WordPress icon here
-        { name: 'Tailwind', icon: null }, // Add your Tailwind icon here
-        { name: 'HTML5', icon: null }, // Add your HTML5 icon here
+        { name: 'Tailwind', icon: Tailwind }, // Add your Tailwind icon here
+        { name: 'HTML5', icon: HTML5 }, // Add your HTML5 icon here
         { name: 'Vue.js', icon: Vue }, // Add your Vue.js icon here
       ]
     },
     {
       title: 'Mobile App Development',
       technologies: [
-        { name: 'Android', icon: null }, // Add your Android icon here
-        { name: 'React Native', icon: null }, // Add your React Native icon here
+        { name: 'Android', icon: Android }, // Add your Android icon here
+        { name: 'React Native', icon: ReactLogo }, // Add your React Native icon here
         { name: 'Flutter', icon: Flutter }, // Add your Flutter icon here
         { name: 'Firebase', icon: Firebase }, // Add your Firebase icon here
-        { name: 'iOS', icon: null }, // Add your iOS icon here
         { name: 'Figma', icon: Figma }, // Add your Figma icon here
-        { name: 'Adobe XD', icon: null }, // Add your Adobe XD icon here
-        { name: 'Sketch', icon: null }, // Add your Sketch icon here
+        { name: 'Adobe XD', icon: Adobe  }, // Add your Adobe XD icon here
+        { name: 'Sketch', icon: Sketch }, // Add your Sketch icon here
       ]
     }
   ]
