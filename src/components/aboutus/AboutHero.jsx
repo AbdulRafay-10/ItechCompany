@@ -19,7 +19,7 @@ function AboutHero() {
             <img src={imgC} alt="team-3" className="absolute left-[28%] top-[84%] w-[100%] rounded-lg shadow-2xl" />
             <div className="absolute left-[78%] top-[54%] w-[65%] h-[300px] rounded-lg shadow-2xl bg-white p-6 flex items-center justify-center text-center">
               <div>
-                <p className="text-3xl font-semibold text-text mb-1">7 Years Of</p>
+                <p className="text-3xl font-semibold text-text mb-1 text-slate-700">7 Years Of</p>
                 <p className="text-4xl font-extrabold text-primary leading-none">Experience</p>
               </div>
             </div>

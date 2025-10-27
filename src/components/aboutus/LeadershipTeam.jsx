@@ -48,7 +48,7 @@ function Card({ member }) {
 
       {/* Body */}
       <div className="bg-white rounded-b-xl pt-6 pb-4 sm:pt-8 sm:pb-6">
-        <h4 className="font-semibold text-lg sm:text-xl">{member.name}</h4>
+        <h4 className="font-semibold text-lg sm:text-xl text-slate-700">{member.name}</h4>
         <p className="text-sm sm:text-lg text-primary font-semibold">{member.title}</p>
       </div>
     </div>

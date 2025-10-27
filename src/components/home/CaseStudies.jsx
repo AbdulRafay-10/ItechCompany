@@ -156,7 +156,7 @@ function CaseStudies() {
                       {stat.icon}
                     </div>
                     <div className='flex flex-col'>
-                      <h1 className='text-4xl md:text-5xl font-bold text-text'>
+                      <h1 className='text-4xl text-slate-700 md:text-5xl font-bold text-text'>
                         {count}
                       </h1>
                       <p className='text-slate-600 font-medium'>

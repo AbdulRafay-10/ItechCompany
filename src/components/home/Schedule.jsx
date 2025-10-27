@@ -238,7 +238,7 @@ const Schedule = () => {
 
                      {/* Timezone Dropdown */}
                      <div className='mt-4'>
-                       <div className='flex items-center text-sm text-gray-500 mb-2'>
+                       <div className='flex items-center text-sm text-slate-700 mb-2'>
                          <svg className='w-4 h-4 mr-1' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                            <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z' />
                          </svg>
@@ -247,7 +247,7 @@ const Schedule = () => {
                        <select
                          value={selectedTimezone}
                          onChange={(e) => setSelectedTimezone(e.target.value)}
-                         className='w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-colors bg-white'
+                         className='w-full px-3 py-2 text-sm border border-gray-300 rounded-lg text-slate-700 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-colors bg-white'
                        >
                          <option value='Pakistan, Maldives Time (UTC+5)'>Pakistan, Maldives Time (UTC+5)</option>
                          <option value='India Standard Time (UTC+5:30)'>India Standard Time (UTC+5:30)</option>
@@ -400,7 +400,7 @@ const Schedule = () => {
                       value={formData.name}
                       onChange={handleInputChange}
                       required
-                      className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-colors'
+                      className='w-full px-4 py-3 border text-slate-700 border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-colors'
                       placeholder='Enter your full name'
                     />
                   </div>
@@ -416,7 +416,7 @@ const Schedule = () => {
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-colors'
+                      className='w-full px-4 py-3 border text-slate-700 border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-colors'
                       placeholder='Enter your email address'
                     />
                   </div>
@@ -431,7 +431,7 @@ const Schedule = () => {
                       value={formData.message}
                       onChange={handleInputChange}
                       rows={4}
-                      className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-colors resize-none'
+                      className='w-full px-4 py-3 border text-slate-700 border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-colors resize-none'
                       placeholder='Tell us about your project or any specific topics you would like to discuss'/>
                   </div>
 
