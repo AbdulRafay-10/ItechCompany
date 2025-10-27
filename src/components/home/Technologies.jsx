@@ -63,44 +63,44 @@ const Technologies = () => {
   ]
 
   return (
-    <section className='w-full py-16'>
+    <section className='w-full py-12 bg-gradient-hero'>
       <div className='w-full max-w-[1400px] mx-auto px-4 md:px-8'>
         {/* Header */}
-        <div className='flex flex-col justify-center items-center text-center space-y-3 mb-16'>
-          <h1 className='text-primary text-3xl md:text-4xl font-semibold'>TECHNOLOGIES</h1>
-          <div className='w-16 h-1 bg-primary rounded-full'></div>
+        <div className='flex flex-col justify-center items-center text-center space-y-2 mb-12'>
+          <h1 className='bg-gradient-to-r from-[#c4d800] to-[#a8b800] bg-clip-text text-transparent text-2xl md:text-3xl font-semibold'>TECHNOLOGIES</h1>
+          <div className='w-16 h-1 bg-gradient-to-r from-[#c4d800] to-[#a8b800] rounded-full'></div>
         </div>
 
         {/* Technology Categories */}
-        <div className='space-y-16'>
+        <div className='space-y-12'>
           {techCategories.map((category, categoryIndex) => (
             <div key={categoryIndex} className=''>
               {/* Category Title */}
-              <div className='flex items-center mb-8'>
-                <h2 className='text-xl md:text-2xl font-semibold text-primary mr-8 whitespace-nowrap'>
+              <div className='flex items-center mb-6'>
+                <h2 className='text-lg md:text-xl font-semibold bg-gradient-to-r from-[#c4d800] to-[#a8b800] bg-clip-text text-transparent mr-6 whitespace-nowrap'>
                   {category.title}
                 </h2>
-                <div className='flex-1 h-px bg-gray-300'></div>
+                <div className='flex-1 h-px bg-gradient-to-r from-[#c4d800] to-transparent'></div>
               </div>
 
               {/* Technology Grid */}
-              <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-6 md:gap-8'>
+              <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4 md:gap-6'>
                 {category.technologies.map((tech, techIndex) => (
                   <div 
                     key={techIndex} 
-                    className='flex flex-col items-center justify-center p-4  rounded-lg   transition-shadow duration-300  group cursor-pointer'
+                    className='flex flex-col items-center justify-center p-3 rounded-xl bg-gradient-card hover:shadow-lg transition-all duration-300 group cursor-pointer hover:transform hover:-translate-y-1'
                   >
                     {/* Technology Icon Placeholder */}
-                    <div className='w-12 h-12 md:w-20 md:h-20 mb-3  rounded-lg flex items-center justify-center group-hover:bg-gray-50 transition-colors'>
+                    <div className='w-10 h-10 md:w-16 md:h-16 mb-2 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
                       {tech.icon ? (
                         <img 
                           src={tech.icon} 
                           alt={tech.name} 
-                          className='w-8 h-8 md:w-24 md:h-24 object-contain'
+                          className='w-6 h-6 md:w-12 md:h-12 object-contain group-hover:filter group-hover:drop-shadow-lg transition-all duration-300'
                         />
                       ) : (
-                        <div className='w-8 h-8 md:w-10 md:h-10 bg-gray-200 rounded flex items-center justify-center'>
-                          <span className='text-xs text-gray-500 font-medium'>
+                        <div className='w-6 h-6 md:w-8 md:h-8 bg-gradient-to-br from-[#c4d800] to-[#a8b800] rounded flex items-center justify-center'>
+                          <span className='text-xs text-white font-medium'>
                             {tech.name.charAt(0)}
                           </span>
                         </div>
@@ -108,7 +108,7 @@ const Technologies = () => {
                     </div>
                     
                     {/* Technology Name */}
-                    <span className='text-sm md:text-base font-medium text-gray-700 text-center leading-tight'>
+                    <span className='text-xs md:text-sm font-medium text-slate-300 text-center leading-tight group-hover:text-slate-100 transition-colors duration-300'>
                       {tech.name}
                     </span>
                   </div>

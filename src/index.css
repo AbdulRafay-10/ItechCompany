@@ -1,38 +1,109 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #086ad8;
-  --color-text: #0e2b3d;
+  --color-primary: #c4d800;
+  --color-primary-dark: #a8b800;
+  --color-primary-light: #d4e820;
+  --color-secondary: #1a1a1a;
+  --color-accent: #f8fa00;
+  --color-text: #f1f5f9;
+  --color-text-light: #cbd5e1;
+  --color-text-dark: #1e293b;
+  --color-bg: #0f172a;
+  --color-bg-light: #1e293b;
+  --color-bg-card: #334155;
+  --color-border: #475569;
 }
 
 @layer base {
-  body { @apply text-text; }
+  html { 
+    @apply text-sm; 
+    font-size: 14px;
+  }
+  body { 
+    @apply text-text; 
+    line-height: 1.5;
+    background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-bg-light) 100%);
+    min-height: 100vh;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+  }
+}
+
+/* Enhanced gradient backgrounds for dark theme */
+.bg-gradient-primary {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+}
+
+.bg-gradient-hero {
+  background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-bg-light) 50%, var(--color-bg) 100%);
+}
+
+.bg-gradient-card {
+  background: linear-gradient(145deg, var(--color-bg-card) 0%, var(--color-bg-light) 100%);
+  border: 1px solid var(--color-border);
+  backdrop-filter: blur(10px);
+}
+
+.bg-dark-section {
+  background: linear-gradient(135deg, var(--color-bg-light) 0%, var(--color-bg) 100%);
+}
+
+/* Enhanced button styles for dark theme */
+.btn-primary-gradient {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  box-shadow: 0 4px 15px rgba(196, 216, 0, 0.3);
+  transition: all 0.3s ease;
+  color: var(--color-bg);
+  font-weight: 600;
+}
+
+.btn-primary-gradient:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(196, 216, 0, 0.4);
+  color: var(--color-bg);
 }
 
 /* slick-carousel base styles */
 @import "slick-carousel/slick/slick.css";
 @import "slick-carousel/slick/slick-theme.css";
 
-/* Water-fill button */
-.btn-water { position: relative; overflow: hidden; isolation: isolate; }
+/* Water-fill button with dark theme colors */
+.btn-water { 
+  position: relative; 
+  overflow: hidden; 
+  isolation: isolate;
+  border: 2px solid var(--color-primary);
+  background: rgba(196, 216, 0, 0.1);
+  color: var(--color-primary);
+  transition: all 0.3s ease;
+}
 .btn-water::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: var(--color-primary);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
   transform: translateY(100%);
   transition: transform .6s cubic-bezier(.2,.8,.2,1);
   z-index: -1;
 }
-.btn-water:hover { color: #fff !important; }
+.btn-water:hover { 
+  color: var(--color-bg) !important; 
+  border-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(196, 216, 0, 0.3);
+}
 .btn-water:hover::before { transform: translateY(0%); }
 
-/* Left-to-right fill button effect */
+/* Left-to-right fill button effect with new colors */
 .btn-fill-left-right { 
   position: relative; 
   overflow: hidden; 
   isolation: isolate; 
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+  background: rgba(196, 216, 0, 0.05);
+  border: 2px solid var(--color-primary);
 }
 .btn-fill-left-right::before {
   content: "";
@@ -41,24 +112,26 @@
   left: 0;
   height: 100%;
   width: 0%;
-  background: var(--color-primary);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
   transition: width 0.4s ease;
   z-index: -1;
 }
 .btn-fill-left-right:hover { 
   color: #fff !important; 
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(196, 216, 0, 0.3);
 }
 .btn-fill-left-right:hover::before { 
   width: 100%; 
 }
 
-/* Process card border fill animation */
+/* Process card border fill animation with new colors */
 .proc-card { position: relative; overflow: hidden; }
 /* top progress bar */
-.proc-card .edge-top { position:absolute; top:0; left:0; height:3px; width:100%; background: var(--color-primary); transform: translateX(-100%); transition: transform .5s ease; z-index: 1; pointer-events: none; }
-.proc-card .edge-bottom { position:absolute; bottom:0; left:0; height:3px; width:100%; background: var(--color-primary); transform: translateX(100%); transition: transform .5s ease; z-index: 1; pointer-events: none; }
+.proc-card .edge-top { position:absolute; top:0; left:0; height:3px; width:100%; background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%); transform: translateX(-100%); transition: transform .5s ease; z-index: 1; pointer-events: none; }
+.proc-card .edge-bottom { position:absolute; bottom:0; left:0; height:3px; width:100%; background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%); transform: translateX(100%); transition: transform .5s ease; z-index: 1; pointer-events: none; }
 /* side progress bar (fills after top completes) */
-.proc-card .edge-side { position:absolute; top:0; bottom:0; width:3px; background: var(--color-primary); transform: scaleY(0); transform-origin: top; transition: transform .5s ease; z-index: 1; pointer-events: none; }
+.proc-card .edge-side { position:absolute; top:0; bottom:0; width:3px; background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%); transform: scaleY(0); transform-origin: top; transition: transform .5s ease; z-index: 1; pointer-events: none; }
 .proc-card .edge-side.left { left:0; }
 .proc-card .edge-side.right { right:0; }
 
@@ -86,7 +159,7 @@
 .proc-card.pattern-trbl .edge-bottom { transform: translateX(-100%); transform-origin: left; }
 .proc-card.pattern-trbl:hover .edge-bottom { transform: translateX(0%); }
 
-/* Swiper custom styles */
+/* Swiper custom styles for dark theme */
 .project-swiper {
   overflow: visible !important;
   padding: 0 60px;
@@ -98,4 +171,46 @@
 
 .project-swiper .swiper-slide {
   height: auto;
+}
+
+/* Attractive glow effects */
+.glow-primary {
+  box-shadow: 0 0 20px rgba(196, 216, 0, 0.3);
+}
+
+.glow-card:hover {
+  box-shadow: 0 8px 32px rgba(196, 216, 0, 0.15);
+}
+
+/* Animated gradient text */
+.gradient-text-animated {
+  background: linear-gradient(-45deg, #c4d800, #a8b800, #d4e820, #c4d800);
+  background-size: 400% 400%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-shift 4s ease-in-out infinite;
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Subtle scrollbar styling for dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
 }

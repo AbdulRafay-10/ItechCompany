@@ -61,11 +61,12 @@ const cards = [
 function Services() {
   return (
     <>
-    <section className='w-full py-16'>
+    <section className='w-full py-12 bg-dark-section'>
       <div className='w-full max-w-[1400px] mx-auto px-1 md:px-2 overflow-hidden'>
-        <div className='flex flex-col justify-center items-center text-center space-y-3 mb-10'>
-          <h1 className='text-primary text-3xl md:text-4xl font-semibold'>SERVICES</h1>
-          <h3 className='text-3xl md:text-5xl text-text font-semibold'>Transform Your Business</h3>
+        <div className='flex flex-col justify-center items-center text-center space-y-2 mb-8'>
+          <h1 className='bg-gradient-to-r from-[#c4d800] to-[#a8b800] bg-clip-text text-transparent text-2xl md:text-3xl font-semibold'>SERVICES</h1>
+          <h3 className='text-2xl md:text-3xl text-slate-100 font-semibold'>Transform Your Business</h3>
+          <div className='w-24 h-1 bg-gradient-to-r from-[#c4d800] to-[#a8b800] rounded-full'></div>
         </div>
 
         <Slider
@@ -83,14 +84,16 @@ function Services() {
         >
           {cards.map((c) => (
             <div key={c.title} className='px-1 md:px-2'>
-              <div className='h-full min-h-[520px] md:min-h-[560px] rounded-2xl bg-white shadow-md hover:shadow-lg border border-slate-200 flex flex-col items-center text-center p-8 md:p-10 transition-shadow'>
-                <img src={c.img} alt={c.title} className='w-48 h-48 md:w-56 md:h-56 object-contain mb-6' />
-                <h4 className='text-2xl md:text-3xl font-semibold text-text mb-2'>{c.title}</h4>
-                <p className='text-base md:text-lg text-slate-600 mb-6 px-3'>{c.subtitle}</p>
+              <div className='h-full min-h-[400px] md:min-h-[440px] rounded-2xl bg-gradient-card shadow-2xl hover:shadow-[#c4d800]/20 border border-slate-600 flex flex-col items-center text-center p-6 md:p-8 transition-all duration-300 hover:transform hover:-translate-y-2 group backdrop-blur-sm'>
+                <div className='w-32 h-32 md:w-40 md:h-40 mb-4 rounded-2xl bg-gradient-to-br from-[#c4d800] to-[#a8b800] p-6 flex items-center justify-center group-hover:scale-105 transition-transform duration-300 shadow-2xl'>
+                  <img src={c.img} alt={c.title} className='w-full h-full object-contain filter brightness-0' />
+                </div>
+                <h4 className='text-lg md:text-xl font-semibold text-slate-100 mb-2'>{c.title}</h4>
+                <p className='text-sm md:text-base text-slate-300 mb-4 px-3'>{c.subtitle}</p>
                 <div className='flex-1' />
                 <button
                   type='button'
-                  className='btn-water relative inline-flex items-center justify-center gap-2 w-full max-w-[260px] md:max-w-[300px] px-7 py-3.5 rounded-full border border-primary text-primary font-semibold md:text-lg transition-colors duration-300 mt-auto'
+                  className='btn-water relative inline-flex items-center justify-center gap-2 w-full max-w-[200px] md:max-w-[240px] px-5 py-2.5 rounded-full font-semibold text-sm md:text-base transition-all duration-300 mt-auto'
                 >
                   Discover More
                   <span className='inline-block'>›</span>

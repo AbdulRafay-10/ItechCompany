@@ -36,28 +36,29 @@ const items = [
 
 function Process() {
   return (
-    <section className="w-full py-16">
+    <section className="w-full py-12 bg-dark-section">
       <div className='w-full px-4 sm:px-6 md:px-8 lg:px-12'>
-        <div className='flex flex-col justify-center items-center text-center space-y-4 mb-16'>
-          <h2 className='text-primary text-3xl md:text-4xl font-semibold'>Our Process</h2>
-          <h3 className='text-3xl md:text-5xl text-text font-semibold'>How we work</h3>
+        <div className='flex flex-col justify-center items-center text-center space-y-3 mb-12'>
+          <h2 className='bg-gradient-to-r from-[#c4d800] to-[#a8b800] bg-clip-text text-transparent text-2xl md:text-3xl font-semibold'>Our Process</h2>
+          <h3 className='text-2xl md:text-3xl text-slate-100 font-semibold'>How we work</h3>
+          <div className='w-24 h-1 bg-gradient-to-r from-[#c4d800] to-[#a8b800] rounded-full'></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mx-auto w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mx-auto w-full">
           {items.map((it, idx) => (
             <div
               key={it.title}
-              className={`proc-card ${idx % 2 === 0 ? 'direction-right' : 'direction-left'} ${idx === 0 ? 'pattern-trbl' : ''}  bg-white border border-slate-200 p-8 md:p-12 shadow-sm hover:shadow-md transition-shadow relative min-h-[240px] md:min-h-[320px]`}
+              className={`proc-card ${idx % 2 === 0 ? 'direction-right' : 'direction-left'} ${idx === 0 ? 'pattern-trbl' : ''}  bg-gradient-card border border-slate-600 p-6 md:p-8 shadow-2xl hover:shadow-[#c4d800]/20 transition-all duration-300 relative min-h-[200px] md:min-h-[240px] rounded-2xl group hover:transform hover:-translate-y-2 backdrop-blur-sm`}
             >
               <span className="edge-top" />
               <span className="edge-bottom" />
               <span className="edge-side left" />
               <span className="edge-side right" />
-              <div className="h-24 w-24 rounded-xl text-primary grid place-items-center mb-4 text-6xl">
+              <div className="h-16 w-16 rounded-xl bg-gradient-to-br from-[#c4d800] to-[#a8b800] text-slate-900 grid place-items-center mb-3 text-4xl group-hover:scale-110 transition-transform duration-300 shadow-2xl">
                 {it.icon}
               </div>
-              <h4 className="text-2xl md:text-3xl font-semibold text-text mb-2">{it.title}</h4>
-              <p className="text-slate-600 leading-relaxed text-sm md:text-base">{it.desc}</p>
+              <h4 className="text-lg md:text-xl font-semibold text-slate-100 mb-2">{it.title}</h4>
+              <p className="text-slate-300 leading-relaxed text-sm md:text-base">{it.desc}</p>
             </div>
           ))}
         </div>
