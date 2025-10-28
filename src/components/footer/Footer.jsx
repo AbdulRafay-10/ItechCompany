@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import logo from '../../assets/images/logo.webp'
 function Footer() {
   return (
-    <footer className="bg-[#001d4c] text-white">
+    <footer className="bg-dark-section text-white">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -102,7 +102,7 @@ function Footer() {
       </div>
 
       {/* Bottom Section - Copyright & Secondary Navigation */}
-      <div className="bg-[#0f2a57] border-t border-gray-700">
+      <div className="bg-[#131c2f] border-t border-gray-700">
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex flex-col sm:flex-row justify-between items-center space-y-2 sm:space-y-0">
             {/* Copyright */}
