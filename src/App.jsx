@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
 import Navbar from './components/navbar/Navbar'
 import StairsTransition from './components/transition/StairsTransition'
+import ScrollToTop from './components/transition/ScrollToTop'
 import TalkToExpertButton from './components/transition/TalkToExpertButton'
 import Footer from './components/footer/Footer'
 import Sidebar from './components/sidebar/Sidebar'
@@ -18,6 +19,7 @@ import DevOps from './pages/services/DevOps'
 import TestingQA from './pages/services/TestingQA'
 import DigitalMarketing from './pages/services/DigitalMarketing'
 import StaffAugmentation from './pages/services/StaffAugmentation'
+import SEO from './pages/services/SEO'
 import LetsConnect from './pages/LetsConnect'
 import CaseStudiesPage from './pages/CaseStudies'
 
@@ -27,6 +29,7 @@ function App() {
   return (
     <Router>
       <div className='w-full'>
+        <ScrollToTop />
         <Navbar
           onOpenRightSidebar={() => setIsRightSidebarOpen(true)}
         />
@@ -44,6 +47,7 @@ function App() {
             <Route path="/services/devops" element={<DevOps />} />
             <Route path="/services/testing-qa" element={<TestingQA />} />
             <Route path="/services/digital-marketing" element={<DigitalMarketing />} />
+            <Route path="/services/seo" element={<SEO />} />
             <Route path="/services/staff-augmentation" element={<StaffAugmentation />} />
             <Route path="/lets-connect" element={<LetsConnect />} />
             <Route path="/case-studies" element={<CaseStudiesPage />} />
