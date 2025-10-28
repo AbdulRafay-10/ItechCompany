@@ -39,9 +39,9 @@ function AboutTrusted() {
 
         <div className="relative">
           {/* 150+ card: desktop top-right, mobile bottom-center */}
-          <div className="absolute right-1/2 translate-x-1/2 bottom-4 md:bottom-auto md:translate-x-0 md:right-[-4rem] md:-top-16 bg-white rounded-md shadow-lg px-8 md:px-12 py-4 md:py-7 text-center">
+          <div className="absolute right-1/2 translate-x-1/2 bottom-4 md:bottom-auto md:translate-x-0 md:right-[-2rem] md:-top-12 bg-white rounded-md shadow-lg px-8 md:px-8 py-4 md:py-7 text-center">
             <p className="text-5xl font-extrabold text-primary">{projectsCount}+</p>
-            <p className="text-lg text-text/70">Completed Projects</p>
+            <p className="text-lg text-black">Completed Projects</p>
           </div>
           <img src={img} alt="meeting" className="w-full h-full rounded-xl" />
         </div>
