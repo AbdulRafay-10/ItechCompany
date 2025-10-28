@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo, useState } from 'react'
 import project1 from '../assets/projects/project (1).png'
 import project2 from '../assets/projects/project (2).png'
 import project3 from '../assets/projects/project (3).png'
@@ -18,6 +18,18 @@ function CaseStudiesPage() {
     { id: 7, title: 'Project Seven', category: 'EdTech Solution', image: project7 },
   ]
 
+
+  const categoryMap = {
+    All: () => true,
+    'Web App': (p) => /web/i.test(p.category),
+    'UI/UX': (p) => /ui|ux|design/i.test(p.category),
+    'Mobile App': (p) => /mobile/i.test(p.category),
+    'CMS': (p) => /cms/i.test(p.category),
+  }
+
+  const [activeFilter, setActiveFilter] = useState('All')
+  const filtered = useMemo(() => projects.filter(categoryMap[activeFilter] || categoryMap.All), [projects, activeFilter])
+
   return (
     <section className='w-full py-16'>
       <div className='w-full max-w-[1400px] mx-auto px-4 md:px-8'>
@@ -26,8 +38,31 @@ function CaseStudiesPage() {
           <p className='text-lg text-slate-600 max-w-2xl'>A selection of our recent work.</p>
         </div>
 
+
+
+
+        <div className='flex flex-wrap items-center justify-center gap-3 md:gap-4 mb-10'>
+          {Object.keys(categoryMap).map((label) => (
+            <button
+              key={label}
+              type='button'
+              onClick={() => setActiveFilter(label)}
+              className={`px-12 py-3 rounded-full text-sm md:text-base font-semibold border transition-colors ${
+                activeFilter === label
+                  ? 'bg-primary text-white border-primary'
+                  : 'bg-white text-primary border-slate-200 hover:border-primary hover:text-primary'
+              }`}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+
+
+
+
         <div className='grid grid-cols-1 md:grid-cols-2 gap-x-24 gap-y-8'>
-          {projects.map((p) => (
+          {filtered.map((p) => (
             <div key={p.id} className='group relative rounded-xl overflow-hidden'>
               <img
                 src={p.image}
@@ -36,7 +71,7 @@ function CaseStudiesPage() {
               />
               <div className='absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300 flex items-end'>
                 <div className='p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
-                  <h3 className='text-white text-xl font-semibold'>{p.title}</h3>
+                  <h3 className='text-primary text-xl font-semibold'>{p.title}</h3>
                   <p className='text-white/90 text-sm'>{p.category}</p>
                 </div>
               </div>
