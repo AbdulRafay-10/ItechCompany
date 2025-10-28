@@ -79,7 +79,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-16 overflow-visible bg-[#f3f7fd]">
+    <section className="py-16 overflow-visible bg-dark-section">
       {/* Heading */}
         <div className='flex flex-col justify-center items-center text-center space-y-3 mb-10'>
           <h1 className='text-primary text-3xl md:text-4xl font-semibold'>TESTIMONIALS</h1>

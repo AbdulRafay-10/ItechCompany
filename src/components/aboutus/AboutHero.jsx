@@ -14,10 +14,10 @@ function AboutHero() {
             <img src={imgA} alt="about-hero" className="w-full rounded-lg shadow-2xl" />
           </div>
 
-          <div className="hidden md:block relative w-full max-w-[520px] overflow-visible -ml-14 -mt-72">
-            <img src={imgA} alt="team-1" className="absolute left-0 top-6 w-[100%] rounded-lg shadow-2xl" />
-            <img src={imgC} alt="team-3" className="absolute left-[28%] top-[84%] w-[100%] rounded-lg shadow-2xl" />
-            <div className="absolute left-[78%] top-[54%] w-[65%] h-[300px] rounded-lg shadow-2xl bg-white p-6 flex items-center justify-center text-center">
+          <div className="hidden md:block relative w-full max-w-[520px] overflow-visible -ml-0 -mt-72">
+            <img src={imgA} alt="team-1" className="absolute left-0 top-6 w-[90%] rounded-lg shadow-2xl" />
+            <img src={imgC} alt="team-3" className="absolute left-[28%] top-[84%] w-[90%] rounded-lg shadow-2xl" />
+            <div className="absolute left-[78%] top-[54%] w-[55%] h-[250px] rounded-lg shadow-2xl bg-white p-6 flex items-center justify-center text-center">
               <div>
                 <p className="text-3xl font-semibold text-text mb-1 text-slate-700">7 Years Of</p>
                 <p className="text-4xl font-extrabold text-primary leading-none">Experience</p>
@@ -28,8 +28,8 @@ function AboutHero() {
         </div>
 
         <div className="space-y-6 text-center md:text-left md:pl-6 lg:pl-10">
-          <h2 className="text-3xl md:text-5xl font-semibold text-black">We Help Companies Scale Business</h2>
-          <p className="text-black  md:text-lg max-w-[640px] mx-auto md:mx-0">
+          <h2 className="text-3xl md:text-5xl font-semibold text-primary">We Help Companies Scale Business</h2>
+          <p className="text-white  md:text-lg max-w-[640px] mx-auto md:mx-0">
             We are a software development company providing end‑to‑end, compliant services for SMBs,
             startups and organizations. Our certified teams build scalable web, mobile and cloud
             solutions that accelerate your growth while ensuring quality and security.
@@ -42,8 +42,8 @@ function AboutHero() {
               </div>
             
               <div>
-                <p className="text-2xl font-semibold text-text">Compliant Organization</p>
-                <p className="text-black  md:text-lg max-w-[640px] mx-auto md:mx-0 ">
+                <p className="text-2xl font-semibold text-primary">Compliant Organization</p>
+                <p className="text-white  md:text-lg max-w-[640px] mx-auto md:mx-0 ">
                   We are a registered firm under a legal entity with the Pakistan Software Export Board (PSEB),
                   the Securities & Exchange Commission of Pakistan (SECP), the Federal Board of Revenue (FBR),
                   and the Pakistan Software Houses Association (P@SHA).
