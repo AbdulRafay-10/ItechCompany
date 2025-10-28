@@ -22,7 +22,7 @@ import Adobe from "../../assets/techStacks/Adobe.png"
 import Sketch from "../../assets/techStacks/sketch.png"
 
 const Technologies = () => {
-  const techCategories = [
+  const techCategories = [ 
     {
       title: 'Backend End Development',
       technologies: [
