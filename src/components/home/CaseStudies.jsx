@@ -144,7 +144,7 @@ function CaseStudies() {
       </div>
 
       {/* Stats Section */}
-      <div ref={statsRef} className='w-full bg-gray-50 py-16'>
+      <div ref={statsRef} className='w-full bg-[#1c2639] py-16'>
         <div className='w-full max-w-[1400px] mx-auto px-4 md:px-8'>
           <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>
             {stats.map((stat, index) => {
@@ -156,10 +156,10 @@ function CaseStudies() {
                       {stat.icon}
                     </div>
                     <div className='flex flex-col'>
-                      <h1 className='text-4xl text-slate-700 md:text-5xl font-bold text-text'>
+                      <h1 className='text-4xl text-[#c4d800] md:text-5xl font-bold text-text'>
                         {count}
                       </h1>
-                      <p className='text-slate-600 font-medium'>
+                      <p className='text-white font-medium'>
                         {stat.label}
                       </p>
                     </div>
