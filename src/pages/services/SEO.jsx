@@ -1,31 +1,30 @@
-import heroImage from '../../assets/Services/Digital-Marketing/heroImg.webp'
-import p1 from '../../assets/Services/Digital-Marketing/p1.webp'
-import p2 from '../../assets/Services/Digital-Marketing/p2.webp'
 import React from 'react'
-import ServiceHero from '../../components/services/ServiceHero'
 import ServiceOverview from '../../components/services/ServiceOverview'
 import ServiceSidebar from '../../components/services/ServiceSidebar'
 import ServiceShowcase from '../../components/services/ServiceShowcase'
 import ServiceContact from '../../components/services/ServiceContact'
 import Process from '../../components/home/Process'
 import Testimonials from '../../components/home/Testimonials'
+import heroImage from '../../assets/Services/Digital-Marketing/heroImg.webp'
+import p1 from '../../assets/Services/Digital-Marketing/p1.webp'
+import p2 from '../../assets/Services/Digital-Marketing/p2.webp'
 
-const DigitalMarketing = () => {
+const SEO = () => {
   const serviceData = {
-    title: 'DIGITAL MARKETING',
+    title: 'SEARCH ENGINE OPTIMIZATION (SEO)',
     heroImage: heroImage,
-    heroImageAlt: 'Digital Marketing Services',
+    heroImageAlt: 'SEO Services',
     overview: [
-      'Our digital marketing services help businesses increase their online presence and drive growth. We create comprehensive marketing strategies that include SEO, social media marketing, content marketing, and paid advertising.',
-      'We use data-driven approaches to optimize campaigns and maximize ROI. Our team stays updated with the latest digital marketing trends and platform changes to ensure your campaigns remain effective.',
-      'From strategy development to campaign execution and analysis, we provide end-to-end digital marketing solutions that deliver measurable results.'
+      'Boost your organic visibility with a comprehensive SEO strategy tailored to your business goals. We combine technical SEO, on-page optimization, and high-quality content to improve rankings and drive qualified traffic.',
+      'Our technical audits uncover crawl issues, Core Web Vitals bottlenecks, and indexing gaps. We implement structured data, optimize site architecture, and enhance internal linking to strengthen topical authority.',
+      'From keyword research and content optimization to ongoing monitoring and reporting, we provide end-to-end SEO services that deliver sustainable growth.'
     ],
     whyChooseUs: [
-      'SEO and content optimization',
-      'Social media marketing and management',
-      'Pay-per-click advertising campaigns',
-      'Email marketing automation',
-      'Analytics and performance tracking'
+      'Technical SEO audits and fixes',
+      'On-page optimization and content strategy',
+      'Core Web Vitals and performance improvements',
+      'Schema markup and rich results',
+      'Transparent reporting and ROI tracking'
     ],
     showcaseImages: {
       darkTheme: [p1, p2],
@@ -101,4 +100,6 @@ const DigitalMarketing = () => {
   )
 }
 
-export default DigitalMarketing
+export default SEO
+
+
