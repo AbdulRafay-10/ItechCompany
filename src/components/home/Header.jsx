@@ -1,14 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import f3 from '../../assets/images/f3.webp'
+import f3 from '../../assets/images/technology.png'
 
 function Header() {
   return (
-    <section className="w-full bg-gradient-hero">
+    <section className="w-full bg-gradient-hero p-12">
       <div className="max-w-[1400px] mx-auto px-4 md:px-8 py-8 md:py-12 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-center justify-center">
         <div className="space-y-6 text-center md:text-left">
-          <div className="text-4xl md:text-5xl font-extrabold">
+          <div className="text-4xl md:text-7xl font-extrabold">
             <motion.h1
               className="text-slate-100 leading-tight"
               initial={{ y: -40, opacity: 0 }}
