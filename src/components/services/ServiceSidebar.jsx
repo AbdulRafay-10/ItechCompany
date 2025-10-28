@@ -10,6 +10,7 @@ const ServiceSidebar = () => {
     { name: 'DevOps', path: '/services/devops' },
     { name: 'Testing & Quality Assurance', path: '/services/testing-qa' },
     { name: 'Digital Marketing', path: '/services/digital-marketing' },
+    { name: 'SEO', path: '/services/seo' },
     { name: 'Staff Augmentation', path: '/services/staff-augmentation', isSpecial: true }
   ]
 

@@ -132,7 +132,7 @@ const Schedule = () => {
   }
 
   return (
-    <section className='w-full py-16 bg-gray-50'>
+    <section className='w-full py-16 bg-[#131c2f]'>
       <div className='w-full max-w-[1400px] mx-auto px-4 md:px-8'>
         {/* Header */}
         <div className='flex flex-col justify-center items-center text-center space-y-3 mb-16'>

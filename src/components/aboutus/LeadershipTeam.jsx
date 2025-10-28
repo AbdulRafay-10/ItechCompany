@@ -7,7 +7,7 @@ import taha from "../../assets/Team-Members/taha.jpeg"
 
 
 const team = [
-  { name: 'Awais Khan', title: 'Founder & CEO', img: p1, imgPosition: 'center 30%' }, 
+  { name: 'Umair Marwat', title: 'Founder & CEO', img: p1, imgPosition: 'center 30%' }, 
   { name: 'Anees Khan', title: 'CEO', img: p2, imgPosition: 'center 0%' },
   { name: 'Taha Khan', title: 'Project Manager', img: taha  },
   { name: 'Abdul Rafay', title: 'Full Stack Developer', img: p3, imgPosition: 'center 10%' },
